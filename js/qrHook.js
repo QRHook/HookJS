@@ -54,7 +54,6 @@ QRCode.prototype = {
 		this.dataList.push(newData);
 		this.dataCache = null;
 	},
-	
 	isDark : function(row, col) {
 		if (row < 0 || this.moduleCount <= row || col < 0 || this.moduleCount <= col) {
 			throw new Error(row + "," + col);
@@ -66,7 +65,7 @@ QRCode.prototype = {
 	},
 	make:function(){
 		// Calculate automatically typeNumber if provided is < 1
-		if (this.typeNumber < 1 ){
+		if (this.typeNumber < 1){
 			var typeNumber = 1;
 
 			var rsBlocks;
@@ -85,6 +84,8 @@ QRCode.prototype = {
 					totalDataCount += rsBlocks[i].dataCount;
 				}
 
+
+				// This needs a different iter
 				for (i = 0; i < this.dataList.length; i++) {
 					data = this.dataList[i];
 					buffer.put(data.mode, 4);
@@ -664,7 +665,6 @@ var QRUtil = {
 		    throw new Error("type:" + type);
 	    }
     },
-
     getLostPoint:function(qrCode){
 	    var moduleCount = qrCode.getModuleCount();
 	    

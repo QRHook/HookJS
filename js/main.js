@@ -7,7 +7,7 @@
 var Main = {
 	init: function(){
 
-		$('#qrHook').qrcode("this plugin is great");
+		$('#qrHook').qrHook("this plugin is great");
 
 	},
 	resize:function(){
