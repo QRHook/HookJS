@@ -1,0 +1,22 @@
+/*
+Main stylesheet for HookJS example page 
+*/
+
+#content{
+	background-color: #303030;
+
+
+	color: #FFF;
+}
+
+#qrHookHeader{
+	height: 120px;
+	line-height: 120px;
+
+	font-size: 40px;
+	font-family: Lato;
+
+	font-weight: bold;
+
+	text-align: center;
+}

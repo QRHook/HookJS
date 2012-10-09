@@ -16,3 +16,7 @@ var Main = {
 };
 
 Main.init();
+
+$(window).on('resize',function(){
+	Main.resize();
+});
