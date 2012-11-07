@@ -1351,6 +1351,8 @@ QRBitBuffer.prototype = {
 		// 	$(this).html(outputString); 
 		// });
 
+		// This shit needs to be JSONified
+
 
 		var createDiv = function(){
 			var qrHook	= new QRHook(options.typeNumber, options.correctLevel);
