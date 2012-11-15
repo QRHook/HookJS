@@ -1261,18 +1261,6 @@ QRBitBuffer.prototype = {
 			foreground: "#000000"
 		}, options);
 
-
-		// var outputString = "";
-
-
-
-		// return this.each(function(){
-		// 	$(this).html(outputString); 
-		// });
-
-		// This shit needs to be JSONified
-
-
 		var createDiv = function(){
 			var qrHook	= new QRHook(options.typeNumber, options.correctLevel);
 			qrHook.addData(options.text);
@@ -1310,7 +1298,7 @@ QRBitBuffer.prototype = {
 		return this.each(function(){
 			var obj = createDiv();
 
-			$(this).html(obj.output).addClass(obj.className).css({
+			$(this).html(obj.output).removeClass().addClass(obj.className).css({
 				'position':'relative',
 				'width': obj.width,
 				'height': obj.height,

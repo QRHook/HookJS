@@ -38,17 +38,17 @@ Main stylesheet for HookJS example page
 }
 
 #qrHookBox{
-	height: 400px;
+	height: 500px;
 }
 
 #qrHookBox > div{
 	float: left;
-	height: 380px;
-	
+	height: 480px;
 }
 
 #qrHookSelection{
 	width: 200px;
+	height: 500px;
 
 	font-size: 16px;
 	font-weight: bold;
@@ -63,34 +63,30 @@ Main stylesheet for HookJS example page
 	text-indent: 10px;
 }
 
+#qrHookSelection > div+div{
+	margin-top: 10px;
+}
+
 #qrHookSelection > div:first-child{
 	margin-top: 40px;
 }
 
 #qrHookSelection > div:hover{
 	cursor: pointer;
-	/*background: rgba(0, 0, 0, 0.6);*/
-	font-size: 18px;
+	background: rgba(0, 0, 0, 0.4);
+	/*font-size: 18px;*/
 
-	/*border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;*/
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
 }
 
 #qrHookContents{
 	padding: 10px;
-
 	width: 680px;
-
 
 	background: rgba(0, 0, 0, 0.6);
 
 	border-radius: 10px;
-
-	/*border-bottom-left-radius:10px;
-	border-top-right-radius:10px;
-	border-bottom-right-radius:10px;*/
-
-	/*background-color: #FFF;*/
 }
 
 #qrHookTopBox{
@@ -153,9 +149,23 @@ Main stylesheet for HookJS example page
 	cursor: default;
 }
 
+#qrHookTextAreaText{
+	width: 665px;
+	height: 370px;
+	font-size: 16px;
+	line-height: 20px;
 
+	resize: none;
+}
 
+#qrHookTextAreaSMSMessage{
+	width: 665px;
+	height: 340px;
+	font-size: 16px;
+	line-height: 20px;
 
+	resize: none;
+}
 
 
 

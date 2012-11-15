@@ -63,15 +63,68 @@
                     <div id="qrHookContents">
                         <div id="QRTypeBox">
                             <div id="QRType_calendarEvent">Calendar event</div>
-                            <div id="QRType_contactInformation">Contact information</div>
-                            <div id="QRType_emailAddress">Email address</div>
+                            <div id="QRType_contactInformation">
+                                <div>
+                                    <input id="qrHookInputName" class="input-xlarge" type="text" placeholder="Name">
+                                </div>
+                                <div>
+                                    <input id="qrHookInputCompany" class="input-xlarge" type="text" placeholder="Company">
+                                </div>
+                                <div>
+                                    <input id="qrHookInputTitle" class="input-xlarge" type="text" placeholder="Title">
+                                </div>
+                                <div>
+                                    <input id="qrHookInputPhoneNumber" class="input-xlarge" type="text" placeholder="Phone Number">
+                                </div>
+                                <div>
+                                    <input id="qrHookInputEmail" class="input-xlarge" type="text" placeholder="Email">
+                                </div>
+                                <div>
+                                    <input id="qrHookInputAddress1" class="input-xlarge" type="text" placeholder="Address">
+                                </div>
+                                <div>
+                                    <input id="qrHookInputAddress2" class="input-xlarge" type="text" placeholder="Address 2">
+                                </div>
+                                <div>
+                                    <input id="qrHookWebsite" class="input-xlarge" type="text" placeholder="Website">
+                                </div>
+                                <div>
+                                    <input id="qrHookInputMemo" class="input-xlarge" type="text" placeholder="Memo">
+                                </div>
+                                <div>
+                                    <select id="cardType">
+                                        <option>MECARD</option>
+                                        <option>vCard</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="QRType_emailAddress">
+                                <div>
+                                    <input id="qrHookInputEmailAddress" class="input-xxlarge" type="text" placeholder="Enter Email address">
+                                </div>
+                            </div>
                             <div id="QRType_geoLocation">Geo location</div>
-                            <div id="QRType_phoneNumber">Phone number</div>
-                            <div id="QRType_sms">SMS</div>
-                            <div id="QRType_text">Text</div>
+                            <div id="QRType_phoneNumber">
+                                <div>
+                                    <input id="qrHookPhoneNumberOnly" class="input-xxlarge" type="text" placeholder="Phone Number">
+                                </div>
+                            </div>
+                            <div id="QRType_sms">
+                                <div>
+                                    <input id="qrHookInputSMSPhoneNumber" class="input-xlarge" type="text" placeholder="Phone Number">
+                                </div>
+                                <div>
+                                    <textarea id="qrHookTextAreaSMSMessage"></textarea>
+                                </div>
+                            </div>
+                            <div id="QRType_text">
+                                <div>
+                                    <textarea id="qrHookTextAreaText"></textarea>
+                                </div>
+                            </div>
                             <div id="QRType_url">
                                 <div>
-                                    <input class="input-xlarge" type="text" placeholder="Enter URL">
+                                    <input id="qrHookInputURL" class="input-xxlarge" type="text" placeholder="Enter URL">
                                 </div>
                             </div>
                             <div id="QRType_wifiNetwork">Wifi network</div>
