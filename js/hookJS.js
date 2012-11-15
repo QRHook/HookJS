@@ -1247,7 +1247,6 @@ QRBitBuffer.prototype = {
 
 (function($){
 	$.fn.qrHook = function(options){
-
 		if( typeof options === 'string' ){
 			options	= { text: options };
 		}

@@ -83,29 +83,29 @@
 	background-position: center;
 }*/
 
-/*#qrHook .qrRow:first-child+div+div+div+div+div+div > div:first-child+div+div+div{
+.qrHook .qrRow:first-child+div+div+div+div+div+div > div:first-child+div+div+div{
 	visibility: hidden;
 }
 
-#qrHook .qrRow:first-child+div+div+div+div+div+div > div:first-child+div+div+div+div{
+.qrHook .qrRow:first-child+div+div+div+div+div+div > div:first-child+div+div+div+div{
 	visibility: hidden;
 }
 
-#qrHook .qrRow:first-child+div+div+div+div+div+div > div:first-child+div+div+div+div+div{
+.qrHook .qrRow:first-child+div+div+div+div+div+div > div:first-child+div+div+div+div+div{
 	visibility: hidden;
 }
 
-#qrHook .qrRow:first-child+div+div+div+div+div+div > div:first-child+div+div+div+div+div{
+.qrHook .qrRow:first-child+div+div+div+div+div+div > div:first-child+div+div+div+div+div{
 	visibility: hidden;
 }
 
-#qrHook .qrRow:first-child+div+div+div+div+div+div > div:first-child+div+div+div+div+div+div{
+.qrHook .qrRow:first-child+div+div+div+div+div+div > div:first-child+div+div+div+div+div+div{
 	visibility: hidden;
 }
-#qrHook .qrRow:first-child+div+div+div+div+div+div+div > div:first-child+div+div+div+div+div+div{
+.qrHook .qrRow:first-child+div+div+div+div+div+div+div > div:first-child+div+div+div+div+div+div{
 	visibility: hidden;
 }
-*/
+
 
 
 
