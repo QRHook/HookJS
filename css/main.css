@@ -7,7 +7,7 @@ Main stylesheet for HookJS example page
 	color: #FFF;
 }
 
-#qrHookHeader{
+/*#qrHookHeader{
 	height: 60px;
 	line-height: 60px;
 
@@ -21,7 +21,7 @@ Main stylesheet for HookJS example page
 
 #topSpace{
 	height: 20px;
-}
+}*/
 
 #qrHookContentArea{
 	margin-left: auto;
@@ -34,7 +34,7 @@ Main stylesheet for HookJS example page
 	/*width: 400px;*/
 	height: 400px;
 
-	background-color: #CCC;
+	/*background-color: #CCC;*/
 }
 
 #qrHookBox{
@@ -43,16 +43,54 @@ Main stylesheet for HookJS example page
 
 #qrHookBox > div{
 	float: left;
-	height: 400px;
+	height: 380px;
+	
 }
 
 #qrHookSelection{
 	width: 200px;
+
+	font-size: 16px;
+	font-weight: bold;
+
+	text-indent: 20px;
+}
+
+#qrHookSelection > div{
+	height: 30px;
+	line-height: 30px;
+
+	text-indent: 10px;
+}
+
+#qrHookSelection > div:first-child{
+	margin-top: 40px;
+}
+
+#qrHookSelection > div:hover{
+	cursor: pointer;
+	/*background: rgba(0, 0, 0, 0.6);*/
+	font-size: 18px;
+
+	/*border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;*/
 }
 
 #qrHookContents{
-	width: 300px;
-	background-color: #FFF;
+	padding: 10px;
+
+	width: 680px;
+
+
+	background: rgba(0, 0, 0, 0.6);
+
+	border-radius: 10px;
+
+	/*border-bottom-left-radius:10px;
+	border-top-right-radius:10px;
+	border-bottom-right-radius:10px;*/
+
+	/*background-color: #FFF;*/
 }
 
 #qrHookTopBox{
@@ -63,15 +101,57 @@ Main stylesheet for HookJS example page
 	height: 200px;
 }
 
-#QRType_calendarEvent,#QRType_contactInformation,#QRType_emailAddress,#QRType_geoLocation,#QRType_phoneNumber,#QRType_sms,#QRType_text,#QRType_url{
+#QRType_calendarEvent,
+#QRType_contactInformation,
+#QRType_emailAddress,
+#QRType_geoLocation,
+#QRType_phoneNumber,
+#QRType_sms,
+#QRType_text,
+#QRType_url,
+#QRType_wifiNetwork{
 	display: none;
 }
 
-.url #QRType_url{
+.calendarEvent #QRType_calendarEvent,
+.contactInformation #QRType_contactInformation,
+.emailAddress #QRType_emailAddress,
+.geoLocation #QRType_geoLocation,
+.phoneNumber #QRType_phoneNumber,
+.sms #QRType_sms,
+.text #QRType_text,
+.url #QRType_url,
+.wifiNetwork #QRType_wifiNetwork{
 	display: block;
 }
 
+.calendarEvent #QRTypeSelection_calendarEvent,
+.contactInformation #QRTypeSelection_contactInformation,
+.emailAddress #QRTypeSelection_emailAddress,
+.geoLocation #QRTypeSelection_geoLocation,
+.phoneNumber #QRTypeSelection_phoneNumber,
+.sms #QRTypeSelection_sms,
+.text #QRTypeSelection_text,
+.url #QRTypeSelection_url,
+.wifiNetwork #QRTypeSelection_wifiNetwork{
+	background: rgba(0, 0, 0, 0.6);
+	font-size: 18px;
 
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.calendarEvent #QRTypeSelection_calendarEvent:hover,
+.contactInformation #QRTypeSelection_contactInformation:hover,
+.emailAddress #QRTypeSelection_emailAddress:hover,
+.geoLocation #QRTypeSelection_geoLocation:hover,
+.phoneNumber #QRTypeSelection_phoneNumber:hover,
+.sms #QRTypeSelection_sms:hover,
+.text #QRTypeSelection_text:hover,
+.url #QRTypeSelection_url:hover,
+.wifiNetwork #QRTypeSelection_wifiNetwork:hover{
+	cursor: default;
+}
 
 
 

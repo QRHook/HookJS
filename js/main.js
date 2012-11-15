@@ -16,9 +16,14 @@ var Main = {
 		// 	// alert(target.id);
 		// 	// alert(this.id);
 
-			
+
 
 		// });
+
+		$('#qrHookSelection > div').on('click',function(){
+			var className = this.id.replace(/.*?_/,'');
+			$('#qrHookBox').removeClass().addClass(className);
+		});
 
 	},
 	resize:function(){

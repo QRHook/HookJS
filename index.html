@@ -6,7 +6,7 @@
 <html lang="en">
     <head>
         <!-- Title for Web Application -->
-        <title>QR Hook Codebase</title>
+        <title>QR Hook Creator</title>
 
         <!-- Favicon for the Web Application -->
         <link href="http://2b4b65d3a888a8c38e25-7297cd5ef4b9c3889ee2d29d61417984.r20.cf2.rackcdn.com/favicons/qrhooklogo-alone32.png" type="image/png" rel="icon" />
@@ -20,7 +20,7 @@
         <link rel="stylesheet" type="text/css" href="css/main.css" />
 
         <!-- Fonts -->
-        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css' />
+        <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Lato' />
 
         <!-- Stylesheet for Twitter Bootstrap -->
         <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -32,12 +32,12 @@
     </head>
     <body>
         <div id="content">
-            <div id="topSpace"></div>
-
-            <div id="qrHookHeader">QR Hook creator</div>
+            <!-- <div id="topSpace"></div>
+            <div id="qrHookHeader">QR Hook creator</div> -->
 
             <div id="qrHookContentArea">
 
+                <!-- Where the QR Hook is displayed -->
                 <div id="qrHookContainer">
                     <div id="qrHookTopBox">
                         <div id="qrHook"></div>
@@ -47,36 +47,21 @@
                 </div>
 
 
-                <div id="qrHookBox">
-
+                <div id="qrHookBox" class="url">
                     <div id="qrHookSelection">
-                        <div>Calendar Event</div>
-                        <div>Contact Information</div>
-                        <div>Email Address</div>
-                        <div>Geo Location</div>
-                        <div>Phone Number</div>
-                        <div>SMS</div>
-                        <div>Text</div>
-                        <div>URL</div>
-                        <div>Wifi Network</div>
+                        <div id="QRTypeSelection_calendarEvent">Calendar Event</div>
+                        <div id="QRTypeSelection_contactInformation">Contact Information</div>
+                        <div id="QRTypeSelection_emailAddress">Email Address</div>
+                        <div id="QRTypeSelection_geoLocation">Geo Location</div>
+                        <div id="QRTypeSelection_phoneNumber">Phone Number</div>
+                        <div id="QRTypeSelection_sms">SMS</div>
+                        <div id="QRTypeSelection_text">Text</div>
+                        <div id="QRTypeSelection_url">URL</div>
+                        <div id="QRTypeSelection_wifiNetwork">Wifi Network</div>
                     </div>
 
                     <div id="qrHookContents">
-                        <!-- <div id="QRType">
-                            <select id="QRTypeSelect">
-                                <option id="QRTypeSelection_calendarEvent">Calendar Event</option>
-                                <option id="QRTypeSelection_contactInformation">Contact Information</option>
-                                <option id="QRTypeSelection_emailAddress">Email Address</option>
-                                <option id="QRTypeSelection_geoLocation">Geo Location</option>
-                                <option id="QRTypeSelection_phoneNumber">Phone Number</option>
-                                <option id="QRTypeSelection_sms">SMS</option>
-                                <option id="QRTypeSelection_text">Text</option>
-                                <option id="QRTypeSelection_calendarEvent" selected="selected">URL</option>
-                                <option id="">Wifi network</option>
-                            </select>
-                        </div> -->
-
-                        <div id="QRTypeBox" class="url">
+                        <div id="QRTypeBox">
                             <div id="QRType_calendarEvent">Calendar event</div>
                             <div id="QRType_contactInformation">Contact information</div>
                             <div id="QRType_emailAddress">Email address</div>
@@ -89,7 +74,7 @@
                                     <input class="input-xlarge" type="text" placeholder="Enter URL">
                                 </div>
                             </div>
-                            <div>Wifi network</div>
+                            <div id="QRType_wifiNetwork">Wifi network</div>
                         </div>
 
                     </div>

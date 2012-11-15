@@ -1309,8 +1309,6 @@ QRBitBuffer.prototype = {
 
 		return this.each(function(){
 			var obj = createDiv();
-			
-			// Need to figure out padding from height and width
 
 			$(this).html(obj.output).addClass(obj.className).css({
 				'position':'relative',
