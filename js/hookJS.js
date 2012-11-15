@@ -11,7 +11,6 @@ function QR8bitByte(data){
 }
 
 QR8bitByte.prototype = {
-
 	getLength:function(buffer) {
 		return this.data.length;
 	},
@@ -134,17 +133,8 @@ QRHook.prototype = {
 				if (col + c <= -1 || this.moduleCount <= col + c){
 					continue;
 				}
-				
-				// if ( (0 <= r && r <= 6 && (c == 0 || c == 6) ) || (0 <= c && c <= 6 && (r == 0 || r == 6) ) || (2 <= r && r <= 4 && 2 <= c && c <= 4) ){
-				// 	this.modules[row + r][col + c] = true;
-				// }else{
-				// 	this.modules[row + r][col + c] = false;
-				// }
 
 				this.modules[row + r][col + c] = ( (0 <= r && r <= 6 && (c == 0 || c == 6) ) || (0 <= c && c <= 6 && (r == 0 || r == 6) ) || (2 <= r && r <= 4 && 2 <= c && c <= 4) ) ? true : false;
-
-
-
 			}		
 		}		
 	},
@@ -226,8 +216,9 @@ QRHook.prototype = {
 
 		var r;
 		var c;
+		var i;
 
-		for (var i = 0; i < pos.length; i++) {
+		for (i = 0; i < pos.length; i++) {
 			for (j = 0; j < pos.length; j++){
 				row = pos[i];
 				col = pos[j];
@@ -238,17 +229,7 @@ QRHook.prototype = {
 				
 				for (r = -2; r <= 2; r++){
 					for (c = -2; c <= 2; c++){
-
-						// if (r == -2 || r == 2 || c == -2 || c == 2 || (r == 0 && c == 0) ){
-						// 	this.modules[row + r][col + c] = true;
-						// } else {
-						// 	this.modules[row + r][col + c] = false;
-						// }
-
-
 						this.modules[row + r][col + c] = (r == -2 || r == 2 || c == -2 || c == 2 || (r == 0 && c == 0) ) ? true : false;
-
-
 					}
 				}
 			}
@@ -383,6 +364,7 @@ QRHook.createData = function(typeNumber, errorCorrectLevel, dataList) {
 	
 	var data;
 
+	// should have its own variable for the length
 	for (var i = 0; i < dataList.length; i++) {
 		data = dataList[i];
 		buffer.put(data.mode, 4);
@@ -392,6 +374,8 @@ QRHook.createData = function(typeNumber, errorCorrectLevel, dataList) {
 
 	// calc num max data.
 	var totalDataCount = 0;
+
+	// should have its own variable for the length
 	for (var i = 0; i < rsBlocks.length; i++) {
 		totalDataCount += rsBlocks[i].dataCount;
 	}
@@ -446,6 +430,9 @@ QRHook.createBytes = function(buffer, rsBlocks) {
 	// var modIndex;
 	var i;
 
+	// Need to fix the shit out of this
+
+
 	// This like shouldn't work
 	for (var r = 0; r < rsBlocks.length; r++){
 
@@ -470,12 +457,10 @@ QRHook.createBytes = function(buffer, rsBlocks) {
 		// var modIndex;
 		ecdata[r] = new Array(rsPoly.getLength() - 1);
 
-
 		for (var y = 0; y < ecdata[r].length; y++) {
             var modIndex = y + modPoly.getLength() - ecdata[r].length;
 			ecdata[r][y] = (modIndex >= 0)? modPoly.get(modIndex) : 0;
 		}
-
 	}
 
 	// Fix these loop variables
@@ -511,71 +496,6 @@ QRHook.createBytes = function(buffer, rsBlocks) {
 
 	return data;
 }
-
-// QRHook.createBytes = function(buffer, rsBlocks) {
-
-// 	var offset = 0;
-	
-// 	var maxDcCount = 0;
-// 	var maxEcCount = 0;
-	
-// 	var dcdata = new Array(rsBlocks.length);
-// 	var ecdata = new Array(rsBlocks.length);
-	
-// 	for (var r = 0; r < rsBlocks.length; r++) {
-
-// 		var dcCount = rsBlocks[r].dataCount;
-// 		var ecCount = rsBlocks[r].totalCount - dcCount;
-
-// 		maxDcCount = Math.max(maxDcCount, dcCount);
-// 		maxEcCount = Math.max(maxEcCount, ecCount);
-		
-// 		dcdata[r] = new Array(dcCount);
-		
-// 		for (var i = 0; i < dcdata[r].length; i++) {
-// 			dcdata[r][i] = 0xff & buffer.buffer[i + offset];
-// 		}
-// 		offset += dcCount;
-		
-// 		var rsPoly = QRUtil.getErrorCorrectPolynomial(ecCount);
-// 		var rawPoly = new QRPolynomial(dcdata[r], rsPoly.getLength() - 1);
-
-// 		var modPoly = rawPoly.mod(rsPoly);
-// 		ecdata[r] = new Array(rsPoly.getLength() - 1);
-// 		for (var i = 0; i < ecdata[r].length; i++) {
-//             var modIndex = i + modPoly.getLength() - ecdata[r].length;
-// 			ecdata[r][i] = (modIndex >= 0)? modPoly.get(modIndex) : 0;
-// 		}
-
-// 	}
-	
-// 	var totalCodeCount = 0;
-// 	for (var i = 0; i < rsBlocks.length; i++) {
-// 		totalCodeCount += rsBlocks[i].totalCount;
-// 	}
-
-// 	var data = new Array(totalCodeCount);
-// 	var index = 0;
-
-// 	for (var i = 0; i < maxDcCount; i++) {
-// 		for (var r = 0; r < rsBlocks.length; r++) {
-// 			if (i < dcdata[r].length) {
-// 				data[index++] = dcdata[r][i];
-// 			}
-// 		}
-// 	}
-
-// 	for (var i = 0; i < maxEcCount; i++) {
-// 		for (var r = 0; r < rsBlocks.length; r++) {
-// 			if (i < ecdata[r].length) {
-// 				data[index++] = ecdata[r][i];
-// 			}
-// 		}
-// 	}
-
-// 	return data;
-
-// }
 
 //---------------------------------------------------------------------
 // QRMode
@@ -680,7 +600,7 @@ var QRUtil = {
     getBCHDigit:function(data) {
 	    var digit = 0;
 
-	    while (data != 0) {
+	    while (data != 0){
 		    digit++;
 		    data >>>= 1;
 	    }
@@ -907,13 +827,12 @@ var QRMath = {
 for (var i = 0; i < 8; i++) {
 	QRMath.EXP_TABLE[i] = 1 << i;
 }
-for (var i = 8; i < 256; i++) {
-	QRMath.EXP_TABLE[i] = QRMath.EXP_TABLE[i - 4]
-		^ QRMath.EXP_TABLE[i - 5]
-		^ QRMath.EXP_TABLE[i - 6]
-		^ QRMath.EXP_TABLE[i - 8];
+
+for (var i = 8; i < 256; i++){
+	QRMath.EXP_TABLE[i] = QRMath.EXP_TABLE[i - 4] ^ QRMath.EXP_TABLE[i - 5] ^ QRMath.EXP_TABLE[i - 6] ^ QRMath.EXP_TABLE[i - 8];
 }
-for (var i = 0; i < 255; i++) {
+
+for (var i = 0; i < 255; i++){
 	QRMath.LOG_TABLE[QRMath.EXP_TABLE[i] ] = i;
 }
 
@@ -1382,7 +1301,7 @@ QRBitBuffer.prototype = {
 			
 			return {
 				"output": outputString,
-				"className":"qrCode qrSize" + tileW,
+				"className":"qrHook qrSize" + tileW,
 				"width": moduleCount * tileW,
 				"height" : moduleCount * tileH
 			};
@@ -1391,9 +1310,17 @@ QRBitBuffer.prototype = {
 		return this.each(function(){
 			var obj = createDiv();
 			
+			// Need to figure out padding from height and width
+
 			$(this).html(obj.output).addClass(obj.className).css({
-				"width": obj.width,
-				"height": obj.height
+				'position':'relative',
+				'width': obj.width,
+				'height': obj.height,
+				'padding': Math.ceil(obj.width * .2)
+			}).posCustom({
+				'boundingBox':'parent',
+				'hPos':'center',
+				'vPos':'center'
 			});
 		});
 

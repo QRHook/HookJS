@@ -1,8 +1,5 @@
 .qrHook{
 	background-color: #FFF;
-
-	padding: 40px;
-
 }
 
 .qrBG1, .qrBG2{float: left;}
@@ -70,9 +67,8 @@
 .qrSize22 .qrRow div{width:22px;height:22px;}
 
 
-#qrHook{
+/*#qrHook{
 	background-image: url('http://c15200598.r98.cf2.rackcdn.com/TechBreakfast/Columbia8-16-2012/images/qrhook_corner12x13_w.png');
-	/*background-position: top left;*/
 	background-position: 40px 40px;
 	background-repeat: no-repeat;
 }
@@ -85,7 +81,7 @@
 
 #qrHook.loggedIn{
 	background-position: center;
-}
+}*/
 
 /*#qrHook .qrRow:first-child+div+div+div+div+div+div > div:first-child+div+div+div{
 	visibility: hidden;

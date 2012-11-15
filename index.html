@@ -3,7 +3,7 @@
     Desc: This tests out the new QR Hook code
  -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <!-- Title for Web Application -->
         <title>QR Hook Codebase</title>
@@ -13,7 +13,7 @@
 
         <!-- Stylesheets below here -->
 
-        <!-- Default Styles -->
+        <!-- Default Styles, this needs its own repo -->
         <link rel="stylesheet" type="text/css" href="http://2b4b65d3a888a8c38e25-7297cd5ef4b9c3889ee2d29d61417984.r20.cf2.rackcdn.com/css/defaultStyles.css" />
 
         <!-- Main styles for web application -->
@@ -28,14 +28,75 @@
         <link rel="stylesheet" type="text/css" href="http://2b4b65d3a888a8c38e25-7297cd5ef4b9c3889ee2d29d61417984.r20.cf2.rackcdn.com/css/bootstrap.min.css" />
 
         <!-- Stylesheet for QR Codes, should be QR Hooks -->
-        <link rel="stylesheet" type="text/css" href="css/qrcode.css" />
+        <link rel="stylesheet" type="text/css" href="css/hookJS.css" />
     </head>
     <body>
         <div id="content">
+            <div id="topSpace"></div>
+
             <div id="qrHookHeader">QR Hook creator</div>
 
+            <div id="qrHookContentArea">
 
-            <div id="qrHook"></div>
+                <div id="qrHookContainer">
+                    <div id="qrHookTopBox">
+                        <div id="qrHook"></div>
+                    </div>
+                    <div id="qrHookBottomControls">
+                    </div>
+                </div>
+
+
+                <div id="qrHookBox">
+
+                    <div id="qrHookSelection">
+                        <div>Calendar Event</div>
+                        <div>Contact Information</div>
+                        <div>Email Address</div>
+                        <div>Geo Location</div>
+                        <div>Phone Number</div>
+                        <div>SMS</div>
+                        <div>Text</div>
+                        <div>URL</div>
+                        <div>Wifi Network</div>
+                    </div>
+
+                    <div id="qrHookContents">
+                        <!-- <div id="QRType">
+                            <select id="QRTypeSelect">
+                                <option id="QRTypeSelection_calendarEvent">Calendar Event</option>
+                                <option id="QRTypeSelection_contactInformation">Contact Information</option>
+                                <option id="QRTypeSelection_emailAddress">Email Address</option>
+                                <option id="QRTypeSelection_geoLocation">Geo Location</option>
+                                <option id="QRTypeSelection_phoneNumber">Phone Number</option>
+                                <option id="QRTypeSelection_sms">SMS</option>
+                                <option id="QRTypeSelection_text">Text</option>
+                                <option id="QRTypeSelection_calendarEvent" selected="selected">URL</option>
+                                <option id="">Wifi network</option>
+                            </select>
+                        </div> -->
+
+                        <div id="QRTypeBox" class="url">
+                            <div id="QRType_calendarEvent">Calendar event</div>
+                            <div id="QRType_contactInformation">Contact information</div>
+                            <div id="QRType_emailAddress">Email address</div>
+                            <div id="QRType_geoLocation">Geo location</div>
+                            <div id="QRType_phoneNumber">Phone number</div>
+                            <div id="QRType_sms">SMS</div>
+                            <div id="QRType_text">Text</div>
+                            <div id="QRType_url">
+                                <div>
+                                    <input class="input-xlarge" type="text" placeholder="Enter URL">
+                                </div>
+                            </div>
+                            <div>Wifi network</div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
         </div>
         
         <!-- Latest jQuery -->

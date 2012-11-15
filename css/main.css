@@ -4,19 +4,79 @@ Main stylesheet for HookJS example page
 
 #content{
 	background-color: #303030;
-
-
 	color: #FFF;
 }
 
 #qrHookHeader{
-	height: 120px;
-	line-height: 120px;
+	height: 60px;
+	line-height: 60px;
 
-	font-size: 40px;
+	font-size: 30px;
 	font-family: Lato;
 
 	font-weight: bold;
 
 	text-align: center;
 }
+
+#topSpace{
+	height: 20px;
+}
+
+#qrHookContentArea{
+	margin-left: auto;
+	margin-right: auto;
+	
+	width: 900px;
+}
+
+#qrHookContainer{
+	/*width: 400px;*/
+	height: 400px;
+
+	background-color: #CCC;
+}
+
+#qrHookBox{
+	height: 400px;
+}
+
+#qrHookBox > div{
+	float: left;
+	height: 400px;
+}
+
+#qrHookSelection{
+	width: 200px;
+}
+
+#qrHookContents{
+	width: 300px;
+	background-color: #FFF;
+}
+
+#qrHookTopBox{
+	height: 400px;
+}
+
+#qrHookBottomControls{
+	height: 200px;
+}
+
+#QRType_calendarEvent,#QRType_contactInformation,#QRType_emailAddress,#QRType_geoLocation,#QRType_phoneNumber,#QRType_sms,#QRType_text,#QRType_url{
+	display: none;
+}
+
+.url #QRType_url{
+	display: block;
+}
+
+
+
+
+
+
+
+
+
+
