@@ -1,5 +1,12 @@
 .qrHook{
 	background-color: #FFF;
+
+	background-image: url(http://2b4b65d3a888a8c38e25-7297cd5ef4b9c3889ee2d29d61417984.r20.cf2.rackcdn.com/img/qrhook_sizable.png);
+
+	background-size:91px auto;
+
+	/*background-position: 55px 55px;*/
+	background-repeat: no-repeat;
 }
 
 .qrBG1, .qrBG2{float: left;}
@@ -66,53 +73,73 @@
 .qrSize22 .qrRow{height:22px}
 .qrSize22 .qrRow div{width:22px;height:22px;}
 
-
-/*#qrHook{
-	background-image: url('http://c15200598.r98.cf2.rackcdn.com/TechBreakfast/Columbia8-16-2012/images/qrhook_corner12x13_w.png');
-	background-position: 40px 40px;
-	background-repeat: no-repeat;
-}
-
-#qrHook.qrSize13{
-	background-image: url('http://c15200598.r98.cf2.rackcdn.com/TechBreakfast/Columbia8-16-2012/images/qrhook_corner12x13_w.png');
-	background-position: 40px 40px;
-	background-repeat: no-repeat;
-}
-
-#qrHook.loggedIn{
-	background-position: center;
-}*/
-
-
-
-/*.qrHook .qrRow:first-child+div+div+div+div+div+div > div:first-child+div+div+div{
+.qrHook .qrRow:first-child > div:first-child,
+.qrHook .qrRow:first-child > div:first-child+div,
+.qrHook .qrRow:first-child > div:first-child+div+div,
+.qrHook .qrRow:first-child > div:first-child+div+div+div,
+.qrHook .qrRow:first-child > div:first-child+div+div+div+div,
+.qrHook .qrRow:first-child > div:first-child+div+div+div+div+div,
+.qrHook .qrRow:first-child > div:first-child+div+div+div+div+div+div{
 	visibility: hidden;
 }
-
-.qrHook .qrRow:first-child+div+div+div+div+div+div > div:first-child+div+div+div+div{
+.qrHook .qrRow:first-child+div > div:first-child,
+.qrHook .qrRow:first-child+div > div:first-child+div,
+.qrHook .qrRow:first-child+div > div:first-child+div+div,
+.qrHook .qrRow:first-child+div > div:first-child+div+div+div,
+.qrHook .qrRow:first-child+div > div:first-child+div+div+div+div,
+.qrHook .qrRow:first-child+div > div:first-child+div+div+div+div+div,
+.qrHook .qrRow:first-child+div > div:first-child+div+div+div+div+div+div{
 	visibility: hidden;
 }
-
-.qrHook .qrRow:first-child+div+div+div+div+div+div > div:first-child+div+div+div+div+div{
+.qrHook .qrRow:first-child+div+div > div:first-child,
+.qrHook .qrRow:first-child+div+div > div:first-child+div,
+.qrHook .qrRow:first-child+div+div > div:first-child+div+div,
+.qrHook .qrRow:first-child+div+div > div:first-child+div+div+div,
+.qrHook .qrRow:first-child+div+div > div:first-child+div+div+div+div,
+.qrHook .qrRow:first-child+div+div > div:first-child+div+div+div+div+div,
+.qrHook .qrRow:first-child+div+div > div:first-child+div+div+div+div+div+div{
 	visibility: hidden;
 }
-
-.qrHook .qrRow:first-child+div+div+div+div+div+div > div:first-child+div+div+div+div+div{
+.qrHook .qrRow:first-child+div+div+div > div:first-child,
+.qrHook .qrRow:first-child+div+div+div > div:first-child+div,
+.qrHook .qrRow:first-child+div+div+div > div:first-child+div+div,
+.qrHook .qrRow:first-child+div+div+div > div:first-child+div+div+div,
+.qrHook .qrRow:first-child+div+div+div > div:first-child+div+div+div+div,
+.qrHook .qrRow:first-child+div+div+div > div:first-child+div+div+div+div+div,
+.qrHook .qrRow:first-child+div+div+div > div:first-child+div+div+div+div+div+div{
 	visibility: hidden;
 }
-
+.qrHook .qrRow:first-child+div+div+div+div > div:first-child,
+.qrHook .qrRow:first-child+div+div+div+div > div:first-child+div,
+.qrHook .qrRow:first-child+div+div+div+div > div:first-child+div+div,
+.qrHook .qrRow:first-child+div+div+div+div > div:first-child+div+div+div,
+.qrHook .qrRow:first-child+div+div+div+div > div:first-child+div+div+div+div,
+.qrHook .qrRow:first-child+div+div+div+div > div:first-child+div+div+div+div+div,
+.qrHook .qrRow:first-child+div+div+div+div > div:first-child+div+div+div+div+div+div{
+	visibility: hidden;
+}
+.qrHook .qrRow:first-child+div+div+div+div+div > div:first-child,
+.qrHook .qrRow:first-child+div+div+div+div+div > div:first-child+div,
+.qrHook .qrRow:first-child+div+div+div+div+div > div:first-child+div+div,
+.qrHook .qrRow:first-child+div+div+div+div+div > div:first-child+div+div+div,
+.qrHook .qrRow:first-child+div+div+div+div+div > div:first-child+div+div+div+div,
+.qrHook .qrRow:first-child+div+div+div+div+div > div:first-child+div+div+div+div+div,
+.qrHook .qrRow:first-child+div+div+div+div+div > div:first-child+div+div+div+div+div+div{
+	visibility: hidden;
+}
+.qrHook .qrRow:first-child+div+div+div+div+div+div > div:first-child,
+.qrHook .qrRow:first-child+div+div+div+div+div+div > div:first-child+div,
+.qrHook .qrRow:first-child+div+div+div+div+div+div > div:first-child+div+div,
+.qrHook .qrRow:first-child+div+div+div+div+div+div > div:first-child+div+div+div,
+.qrHook .qrRow:first-child+div+div+div+div+div+div > div:first-child+div+div+div+div,
+.qrHook .qrRow:first-child+div+div+div+div+div+div > div:first-child+div+div+div+div+div,
 .qrHook .qrRow:first-child+div+div+div+div+div+div > div:first-child+div+div+div+div+div+div{
 	visibility: hidden;
 }
+
 .qrHook .qrRow:first-child+div+div+div+div+div+div+div > div:first-child+div+div+div+div+div+div{
 	visibility: hidden;
-}*/
-
-
-
-
-
-
+}
 
 
 

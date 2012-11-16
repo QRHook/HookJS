@@ -1290,18 +1290,23 @@ QRBitBuffer.prototype = {
 				"output": outputString,
 				"className":"qrHook qrSize" + tileW,
 				"width": moduleCount * tileW,
-				"height" : moduleCount * tileH
+				"height" : moduleCount * tileH,
+				'pixelSize':tileW
 			};
 		}
 
 		return this.each(function(){
 			var obj = createDiv();
 
+			var padding = Math.ceil(obj.width * .2);
+
 			$(this).html(obj.output).removeClass().addClass(obj.className).css({
 				'position':'relative',
 				'width': obj.width,
 				'height': obj.height,
-				'padding': Math.ceil(obj.width * .2)
+				'padding': padding,
+				'background-size':obj.pixelSize * 7,
+				'background-position':padding+'px ' + padding + 'px'
 			}).posCustom({
 				'boundingBox':'parent',
 				'hPos':'center',
