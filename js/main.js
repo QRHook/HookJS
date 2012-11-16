@@ -167,9 +167,6 @@ var Main = {
 			Main.qrHook.qrHook("WIFI:" + str + ";");
 		});
 
-
-
-
 	},
 	resize:function(){
 		Win.init();
