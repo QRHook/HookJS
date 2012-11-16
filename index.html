@@ -127,7 +127,21 @@
                                     <input id="qrHookInputURL" class="input-xxlarge" type="text" placeholder="Enter URL">
                                 </div>
                             </div>
-                            <div id="QRType_wifiNetwork">Wifi network</div>
+                            <div id="QRType_wifiNetwork">
+                                <div>
+                                    <input id="qrHookInputSSID" class="input-xxlarge" type="text" placeholder="SSID">
+                                </div>
+                                <div>
+                                    <input id="qrHookInputPassword" class="input-xxlarge" type="text" placeholder="Password">
+                                </div>
+                                <div>
+                                    <select id="qrHookNetworkType">
+                                        <option value="WEP">WEP</option>
+                                        <option value="WPA">WPA/WPA2</option>
+                                        <option value="nopass">No encryption</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
 
                     </div>

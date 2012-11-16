@@ -77,16 +77,19 @@ var Main = {
 	init: function(){
 		this.qrHook.qrHook('');
 
+		// Takes care of menu switching
 		$('#qrHookSelection > div').on('click',function(){
 			var className = this.id.replace(/.*?_/,'');
 			$('#qrHookBox').removeClass().addClass(className);
 		});
 
+		// Takes care of email addresses
 		$('#qrHookInputEmailAddress').on('keyup',function(){
 			var email = 'mailto:' + $(this).val();
 			Main.qrHook.qrHook(email);
 		});
 
+		// For websites
 		$('#qrHookInputURL').on('keyup',function(){
 			var url = $(this).val();
 			Main.qrHook.qrHook(url);
@@ -97,8 +100,6 @@ var Main = {
 			var text = $(this).val();
 			Main.qrHook.qrHook(text);
 		});
-
-		// $('#qrHookInputName,#qrHookInputCompany,#qrHookInputTitle,#qrHookInputPhoneNumber,#qrHookInputEmail,#qrHookInputAddress1,#qrHookInputAddress2,#qrHookWebsite,#qrHookInputMemo').on('');
 
 		$('#QRType_contactInformation .input-xlarge').on('keyup',function(){
 			// Get MECARD or vCard
@@ -125,21 +126,49 @@ var Main = {
 			Main.qrHook.qrHook(str);
 		});
 
+		// For SMS
 		$('#qrHookInputSMSPhoneNumber,#qrHookTextAreaSMSMessage').on('keyup',function(){
 			//Add error correction here
 
 			var str = "";
 
 			str += "smsto:" + $('#qrHookInputSMSPhoneNumber').val();
-
 			str += ":" + $('#qrHookTextAreaSMSMessage').val();
 
 			Main.qrHook.qrHook(str);
 		});
 
+		// Takes care of phone numbers
 		$('#qrHookPhoneNumberOnly').on('keyup',function(){
 			Main.qrHook.qrHook("tel:" + $(this).val());
 		});
+
+		$('#qrHookInputSSID,#qrHookInputPassword').on('keyup',function(){
+			var str = "";
+
+			str += "S:" + $('#qrHookInputSSID').val() + ";";
+
+			str +="T:" + $('#qrHookNetworkType').val() + ";";
+
+			str += "P:" + $('#qrHookInputPassword').val() + ";";
+
+			Main.qrHook.qrHook("WIFI:" + str + ";");
+		});
+
+		$('#qrHookNetworkType').on('change',function(){
+			var str = "";
+
+			str += "S:" + $('#qrHookInputSSID').val() + ";";
+
+			str +="T:" + $('#qrHookNetworkType').val() + ";";
+
+			str += "P:" + $('#qrHookInputPassword').val() + ";";
+
+			Main.qrHook.qrHook("WIFI:" + str + ";");
+		});
+
+
+
 
 	},
 	resize:function(){
