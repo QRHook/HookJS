@@ -1,11 +1,7 @@
 .qrHook{
 	background-color: #FFF;
-
 	background-image: url(http://2b4b65d3a888a8c38e25-7297cd5ef4b9c3889ee2d29d61417984.r20.cf2.rackcdn.com/img/qrhook_sizable.png);
-
-	background-size:91px auto;
-
-	/*background-position: 55px 55px;*/
+	/*background-size:91px auto;*/
 	background-repeat: no-repeat;
 }
 
