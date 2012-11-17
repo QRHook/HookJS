@@ -3,7 +3,6 @@
 	Desc: 	This is the main js file for the web application
 */
 
-
 var Main = {
 	qrHook:$('#qrHook'),
 
