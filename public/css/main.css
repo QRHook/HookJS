@@ -5,6 +5,8 @@ Main stylesheet for HookJS example page
 #content{
 	background-color: #303030;
 	color: #FFF;
+
+	overflow-y: scroll;
 }
 
 /*#qrHookHeader{
