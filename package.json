@@ -1,6 +1,6 @@
 {
   "name": "HookJS",
-  "version": "0.0.0",
+  "version": "0.0.0-2",
   "description": "QR Code and QR Hook generator",
   "main": "server.js",
   "dependencies": {
@@ -11,7 +11,8 @@
     "filed": "git://github.com/mikeal/filed.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "server.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,12 @@
   },
   "author": "OpenSourceAnonymous & Jarrett Cruger",
   "license": "MIT",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "domains": [
+    "creator.qrhook.com"
+  ],
+  "subdomain": "qrhook.HookJS",
+  "engines": {
+    "node": "0.8.x"
+  }
 }
