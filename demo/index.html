@@ -1,0 +1,164 @@
+<!--
+    Author: OpenSourceAnonymous
+    Desc: This tests out the new QR Hook code
+ -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Title for Web Application -->
+        <title>QR Hook Creator</title>
+
+        <!-- Favicon for the Web Application -->
+        <!-- <link href="http://2b4b65d3a888a8c38e25-7297cd5ef4b9c3889ee2d29d61417984.r20.cf2.rackcdn.com/favicons/qrhooklogo-alone32.png" type="image/png" rel="icon" /> -->
+
+        <!-- Stylesheets below here -->
+
+        <!-- Default Styles, this needs its own repo -->
+        <!-- <link rel="stylesheet" type="text/css" href="http://2b4b65d3a888a8c38e25-7297cd5ef4b9c3889ee2d29d61417984.r20.cf2.rackcdn.com/css/defaultStyles.css" /> -->
+
+        <!-- Main styles for web application -->
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+        <!-- Fonts -->
+        <!-- <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Lato' /> -->
+
+        <!-- Stylesheet for Twitter Bootstrap -->
+        <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css" /> -->
+        <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/css/bootstrap.min.css" />
+
+        <!-- Stylesheet for QR Codes, should be QR Hooks -->
+        <link rel="stylesheet" type="text/css" href="css/hookJS.css" />
+    </head>
+    <body>
+        <div id="content">
+            <div id="qrHookContentArea">
+                <!-- Where the QR Hook is displayed -->
+                <div id="qrHookContainer">
+                    <div id="qrHookTopBox">
+                        <div id="qrHook"></div>
+                    </div>
+                    <div id="qrHookBottomControls">
+                    </div>
+                </div>
+
+                <div id="qrHookBox" class="url">
+                    <div id="qrHookSelection">
+                        <div id="QRTypeSelection_calendarEvent">Calendar Event</div>
+                        <div id="QRTypeSelection_contactInformation">Contact Information</div>
+                        <div id="QRTypeSelection_emailAddress">Email Address</div>
+                        <div id="QRTypeSelection_geoLocation">Geo Location</div>
+                        <div id="QRTypeSelection_phoneNumber">Phone Number</div>
+                        <div id="QRTypeSelection_sms">SMS</div>
+                        <div id="QRTypeSelection_text">Text</div>
+                        <div id="QRTypeSelection_url">URL</div>
+                        <div id="QRTypeSelection_wifiNetwork">Wifi Network</div>
+                    </div>
+
+                    <div id="qrHookContents">
+                        <div id="QRTypeBox">
+                            <div id="QRType_calendarEvent">Calendar event to add later</div>
+                            <div id="QRType_contactInformation">
+                                <div>
+                                    <input id="qrHookInputName" class="input-xlarge" type="text" placeholder="Name">
+                                </div>
+                                <div>
+                                    <input id="qrHookInputCompany" class="input-xlarge" type="text" placeholder="Company">
+                                </div>
+                                <div>
+                                    <input id="qrHookInputTitle" class="input-xlarge" type="text" placeholder="Title">
+                                </div>
+                                <div>
+                                    <input id="qrHookInputPhoneNumber" class="input-xlarge" type="text" placeholder="Phone Number">
+                                </div>
+                                <div>
+                                    <input id="qrHookInputEmail" class="input-xlarge" type="text" placeholder="Email">
+                                </div>
+                                <div>
+                                    <input id="qrHookInputAddress1" class="input-xlarge" type="text" placeholder="Address">
+                                </div>
+                                <div>
+                                    <input id="qrHookInputAddress2" class="input-xlarge" type="text" placeholder="Address 2">
+                                </div>
+                                <div>
+                                    <input id="qrHookWebsite" class="input-xlarge" type="text" placeholder="Website">
+                                </div>
+                                <div>
+                                    <input id="qrHookInputMemo" class="input-xlarge" type="text" placeholder="Memo">
+                                </div>
+                                <div>
+                                    <select id="cardType">
+                                        <option>MECARD</option>
+                                        <option>vCard</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="QRType_emailAddress">
+                                <div>
+                                    <input id="qrHookInputEmailAddress" class="input-xxlarge" type="text" placeholder="Enter Email address">
+                                </div>
+                            </div>
+                            <div id="QRType_geoLocation">Geo location to add later</div>
+                            <div id="QRType_phoneNumber">
+                                <div>
+                                    <input id="qrHookPhoneNumberOnly" class="input-xxlarge" type="text" placeholder="Phone Number">
+                                </div>
+                            </div>
+                            <div id="QRType_sms">
+                                <div>
+                                    <input id="qrHookInputSMSPhoneNumber" class="input-xlarge" type="text" placeholder="Phone Number">
+                                </div>
+                                <div>
+                                    <textarea id="qrHookTextAreaSMSMessage"></textarea>
+                                </div>
+                            </div>
+                            <div id="QRType_text">
+                                <div>
+                                    <textarea id="qrHookTextAreaText"></textarea>
+                                </div>
+                            </div>
+                            <div id="QRType_url">
+                                <div>
+                                    <input id="qrHookInputURL" class="input-xxlarge" type="text" placeholder="Enter URL">
+                                </div>
+                            </div>
+                            <div id="QRType_wifiNetwork">
+                                <div>
+                                    <input id="qrHookInputSSID" class="input-xxlarge" type="text" placeholder="SSID">
+                                </div>
+                                <div>
+                                    <input id="qrHookInputPassword" class="input-xxlarge" type="text" placeholder="Password">
+                                </div>
+                                <div>
+                                    <select id="qrHookNetworkType">
+                                        <option value="WEP">WEP</option>
+                                        <option value="WPA">WPA/WPA2</option>
+                                        <option value="nopass">No encryption</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+        <!-- Latest jQuery -->
+        <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+
+
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/bootstrap.min.js"></script>
+
+        <!-- Plugin for handling position and size -->
+        <script type="text/javascript" src="js/sizePosition.js"></script>
+
+        <!-- Main QR Hook code -->
+        <script type="text/javascript" src="../hookJS.js"></script>
+
+        <!-- Main js file -->
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>
