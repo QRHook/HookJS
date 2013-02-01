@@ -32,6 +32,8 @@ environment.start = function (app, cb) {
     app.start(3000, function () {
         console.log('App Started mother fucker');
 
-        if(cb) { cb(); }
+        if(cb){
+            cb();
+        }
     });
 };
